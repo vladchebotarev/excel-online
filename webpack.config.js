@@ -61,7 +61,7 @@ module.exports = (env, argv) => {
     },
     devServer: {
       port: '3000',
-      open: true,
+      // open: true,
       // hot: true,
       watchFiles: './'
     },
@@ -83,7 +83,8 @@ module.exports = (env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-class-properties']
             }
           }
         }
